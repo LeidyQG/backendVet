@@ -1,0 +1,21 @@
+{
+  "name": "backendvet",
+  "version": "0.0.1",
+  "description": "backend de la veterinaria",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "veterinaria",
+    "backend"
+  ],
+  "author": "Leidy Quiñones",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
