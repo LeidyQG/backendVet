@@ -1,6 +1,5 @@
 //npm install --save-dev prisma (instala prisma) y npx prisma init(inicializa prisma)
-import { PrismaClient } from '@prisma/client'
-
+const { PrismaClient }=require('@prisma/client');
 class AdminEspecie{
 
     constructor(){
@@ -13,12 +12,14 @@ class AdminEspecie{
             {
                 data:datos
             }
-        )
+        );
+        res.json(especie);
 
     }
 
-    listarEspecie(req,res){
-
+    async listarEspecie(req,res){
+        const especies= await this.prisma.especie.findMany();
+        res.json(especies);
     }
 }
 
